@@ -18,6 +18,14 @@ const Blue = (props) => {
   )
 }
 
+const Home = (props) => {
+  return (
+    <div className='home'>
+      <h1>HOME</h1>
+    </div>
+  )
+}
+
 const Main = (props) => {
   return (
     <Router>
@@ -31,6 +39,7 @@ const Main = (props) => {
         <div id='main-section'>
           <Route path='/red' component={Red} />
           <Route path='/blue' component={Blue} />
+          <Route path='/' component={Home} />
         </div>
 
       </div>
