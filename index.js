@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 const Red = (props) => {
   return (
@@ -19,16 +20,21 @@ const Blue = (props) => {
 
 const Main = (props) => {
   return (
-    <div id='container'>
+    <Router>
+      <div id='container'>
 
-      <div id='navbar'>
-        {/* navigation here */}
-      </div>
+        <div id='navbar'>
+          <Link to='/red'>Go to Red</Link>
+          <Link to='/blue'>Go to Blue</Link>
+        </div>
 
-      <div id='main-section'>
-        {/* routes here */}
+        <div id='main-section'>
+          <Route path='/red' component={Red} />
+          <Route path='/blue' component={Blue} />
+        </div>
+
       </div>
-    </div>
+    </Router>
   )
 }
 
