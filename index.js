@@ -33,13 +33,14 @@ const Main = (props) => {
 
         <div id='navbar'>
           <Link to='/red'>Go to Red</Link>
+          <Link to='/'>Go Home</Link>
           <Link to='/blue'>Go to Blue</Link>
         </div>
 
         <div id='main-section'>
           <Route path='/red' component={Red} />
           <Route path='/blue' component={Blue} />
-          <Route path='/' component={Home} />
+          <Route exact path='/' component={Home} />
         </div>
 
       </div>
